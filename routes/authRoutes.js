@@ -12,7 +12,10 @@ module.exports = (app) => {
     // google strategy now has to code to handle the request for the user profile
     app.get(
         '/auth/google/callback', 
-        passport.authenticate('google')
+        passport.authenticate('google'),
+        (req, res) => {
+            res.redirect('/surveys');
+        }
     );
 
     app.get('/api/logout', (req, res) => {
