@@ -15,4 +15,6 @@ ReactDOM.render(
 <Provider store={store}><App /></Provider>,
 document.querySelector('#root'));
 
+
+console.log('Stripe key is ', process.env.REACT_APP_STRIPE_KEY);
 // Provider is a component that makes the store accessible to every component in the app.
